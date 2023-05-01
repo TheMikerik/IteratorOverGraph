@@ -12,4 +12,12 @@ Then just run it by
 ./iterator
 ```
 ## Graph Visualization
-I also added graph visualization for each graph thats tested in this program. You can find it in the Graphs Visual folder.
+There is the graph visualization of the graphs used in this project:
+
+![1st graph](/ALG/Project/Graphs_Visual/Graph1-visual.png)
+![2nd graph](/ALG/Project/Graphs_Visual/Graph2-visual.png)
+![3rd graph](/ALG/Project/Graphs_Visual/Graph3-visual.png)
+![4th graph](/ALG/Project/Graphs_Visual/Graph4-visual.png)
+![5th graph](/ALG/Project/Graphs_Visual/Graph5-visual.png)
+![6th graph](/ALG/Project/Graphs_Visual/Graph6-visual.png)
+![7th graph](/ALG/Project/Graphs_Visual/Graph7-visual.png)
