@@ -14,10 +14,10 @@ Then just run it by
 ## Graph Visualization
 There is the graph visualization of the graphs used in this project:
 
-![1st graph](/ALG/Project/Graphs_Visual/Graph1-visual.png)
-![2nd graph](/ALG/Project/Graphs_Visual/Graph2-visual.png)
-![3rd graph](/ALG/Project/Graphs_Visual/Graph3-visual.png)
-![4th graph](/ALG/Project/Graphs_Visual/Graph4-visual.png)
-![5th graph](/ALG/Project/Graphs_Visual/Graph5-visual.png)
-![6th graph](/ALG/Project/Graphs_Visual/Graph6-visual.png)
-![7th graph](/ALG/Project/Graphs_Visual/Graph7-visual.png)
+![1st graph](/Graphs_Visual/Graph1-visual.png)
+![2nd graph](/Graphs_Visual/Graph2-visual.png)
+![3rd graph](/Graphs_Visual/Graph3-visual.png)
+![4th graph](/Graphs_Visual/Graph4-visual.png)
+![5th graph](/Graphs_Visual/Graph5-visual.png)
+![6th graph](/Graphs_Visual/Graph6-visual.png)
+![7th graph](/Graphs_Visual/Graph7-visual.png)
