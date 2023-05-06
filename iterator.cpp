@@ -28,7 +28,7 @@ void Iterator::PrintInfo(){
 
 void Iterator::ResetStatuses(){
     for (int i=0; i<this->graph.count; i++){
-        this->graph.nodes[i].status = visited;
+        this->graph.nodes[i].status = not_visited;
     }
 }
 
@@ -38,7 +38,7 @@ void Iterator::Reset(Graph testGrap){
     std::vector<Node *> start_in_components;
 
     for (int i=0; i<testGrap.count; i++){
-        if (testGrap.nodes[i].status == visited){
+        if (testGrap.nodes[i].status == not_visited){
             Node* currentNode = &testGrap.nodes[i];
 
             Node* lowest = currentNode;
@@ -56,7 +56,7 @@ void Iterator::Reset(Graph testGrap){
                 }
 
                 for (std::vector<Node *>::size_type j=0; j<currentNode->neighbors.size(); j++){
-                    if( currentNode->neighbors[j]->status == visited ){
+                    if( currentNode->neighbors[j]->status == not_visited ){
                         stack.push(currentNode->neighbors[j]);
                         currentNode->neighbors[j]->status = processing;
                     }
@@ -118,7 +118,7 @@ void Iterator::DoDFS(){
             this->CurrentKey(currentInLoop->id);
 
             for (std::vector<Node *>::size_type i=0; i<currentInLoop->neighbors.size(); i++){
-                if(currentInLoop->neighbors[i]->status == visited){
+                if(currentInLoop->neighbors[i]->status == not_visited){
                     stack.push(currentInLoop->neighbors[i]);
                     currentInLoop->neighbors[i]->status = processing;
                 }
@@ -150,7 +150,7 @@ void Iterator::DoBFS(){
             this->CurrentKey(currentInLoop->id);
 
             for (std::queue<Node *>::size_type i=0; i<currentInLoop->neighbors.size(); i++){
-                if(currentInLoop->neighbors[i]->status == visited){
+                if(currentInLoop->neighbors[i]->status == not_visited){
                     queue.push(currentInLoop->neighbors[i]);
                     currentInLoop->neighbors[i]->status = processing;
                 }
