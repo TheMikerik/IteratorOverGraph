@@ -31,15 +31,3 @@ int GetNodeCount(std::string filename);
  * However it is slightly modified for this exact project.
 */
 Graph loadGraph(std::string filename);
-
-
-/**
- * This prints the raw graph starting from the first node based on loading.
- * Prints each node and its neighborows.
- * 
- * @param graph Graph that should be printed
- * 
- * This part of the code was provided to me by mr. Kot in CV5.
- * However it is slightly modified for this exact project.
-*/
-void printGraph(Graph graph);

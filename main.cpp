@@ -1,30 +1,27 @@
 #include "graph.h"
 #include "loadGraph.h"
 #include "loadGraph.cpp"
-#include "iterator.h"
-#include "iterator.cpp"
+#include "DFSIterator.h"
+#include "DFSIterator.cpp"
+#include "BFSIterator.h"
+#include "BFSIterator.cpp"
+
 
 int main(){
     for (int in=1; in<8; in++){
         std::string path = "./Graphs/Graph" + std::to_string(in) + ".txt";
-    
-        Graph graph = loadGraph(path);
-        Iterator dfs(graph);
-        std::cout << "Graph" << in << " has " << graph.count << " original nodes." << std::endl;
-        printGraph(graph);
-        dfs.Reset(graph);   
-        dfs.PrintInfo();
+        std::cout << "\nGraph " << in << ":\n";
+        DFSIterator iterDFS(loadGraph(path));
+        BFSIterator iterBFS(loadGraph(path));
 
+        std::cout << "     DFS: ";
+        for( iterDFS.Reset(); !iterDFS.IsEnd(); iterDFS.Next()){
+            std::cout << iterDFS.CurrentKey() << " ";
+        }
 
-        dfs.DoDFS();
-        graph = loadGraph(path);
-        Iterator bfs(graph);
-        dfs.DoBFS();
-
-
-        std::cout << "\n\n\n\n";
+        std::cout << "\n     BFS: ";
+        for( iterBFS.Reset(); !iterBFS.IsEnd(); iterBFS.Next()){
+            std::cout << iterBFS.CurrentKey() << " ";
+        }
     }
-
-    std::cout << "This is the very end.\n\n" << std::endl;
-    return 0;
 }
